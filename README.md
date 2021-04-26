@@ -1,5 +1,5 @@
 # PBL3_CNPM
-### Đề tài: 
+### Đề tài: Quản lý học viên của một trung tâm đào tạo tin học.
 ### Danh sách thành viên:
 |STT|Tên|Chức vụ|SDT|Email|
 |-|-|-|-|-|
