@@ -3,6 +3,7 @@ package com.appdesktop.qlhv.controller;
 import com.appdesktop.qlhv.bean.DanhMucBean;
 import com.appdesktop.qlhv.view.HocVienJPanel;
 import com.appdesktop.qlhv.view.KhoaHocJPanel;
+import com.appdesktop.qlhv.view.ThongKeJPanel;
 import com.appdesktop.qlhv.view.TrangChuJPanel;
 import java.awt.BorderLayout;
 import java.awt.Color;
@@ -67,6 +68,9 @@ public class ChuyenManHinhController {
                     break;
                 case "KhoaHoc":
                     node = new KhoaHocJPanel();
+                    break;
+                case "ThongKe":
+                    node = new ThongKeJPanel();
                     break;
                 default:
                     node = new TrangChuJPanel();

@@ -5,6 +5,7 @@
  */
 package com.appdesktop.qlhv.main;
 
+import com.appdesktop.qlhv.view.DangNhapJDialog;
 import com.appdesktop.qlhv.view.MainJFrame;
 
 /**
@@ -13,6 +14,12 @@ import com.appdesktop.qlhv.view.MainJFrame;
  */
 public class Main {
     public static void main(String[] args) {
-        new MainJFrame().setVisible(true);
+        //new MainJFrame().setVisible(true);
+        DangNhapJDialog dialog = new DangNhapJDialog(null, true);
+        dialog.setTitle("Đăng nhập hệ thống!");
+        dialog.setResizable(false);
+        dialog.setLocationRelativeTo(dialog);
+        dialog.setVisible(true);
+        
     }
 }
