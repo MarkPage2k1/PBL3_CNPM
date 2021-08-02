@@ -175,12 +175,12 @@ public class MarkManagementJPanel extends javax.swing.JPanel {
             } else if (count < 1){
                 MessageDialogHelper.showMessageDialog(parentForm, "Vui lòng chọn một sinh viên để chỉnh sửa", "Thông báo");
             } else {
-                MessageDialogHelper.showMessageDialog(parentForm, "Bạn chọn quá nhiều sinh viên!\nVui lòng chọn một sinh viên để chỉnh sửa", "Thông báo");
+                MessageDialogHelper.showMessageDialog(parentForm, "Bạn đã chọn quá nhiều sinh viên!\nVui lòng chọn một sinh viên để chỉnh sửa", "Thông báo");
             }
             
         } catch (Exception e) {
             //e.printStackTrace();
-            MessageDialogHelper.showErrorDialog(parentForm, e.getMessage(), "Lỗi");
+            MessageDialogHelper.showErrorDialog(parentForm, e.getMessage(), "Thông báo");
         }
     }//GEN-LAST:event_MarkUpdateActionPerformed
     

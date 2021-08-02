@@ -163,7 +163,7 @@ public class FormManagerSub extends javax.swing.JPanel {
             
         } catch (Exception e) {
             e.printStackTrace();
-            MessageDialogHelper.showErrorDialog(parentForm, e.getMessage(), "Lỗi");
+            MessageDialogHelper.showErrorDialog(parentForm, e.getMessage(), "Thông báo");
         }
     }//GEN-LAST:event_btnDetailActionPerformed
 
@@ -185,7 +185,7 @@ public class FormManagerSub extends javax.swing.JPanel {
             
         } catch (Exception e) {
             e.printStackTrace();
-            MessageDialogHelper.showErrorDialog(parentForm, e.getMessage(), "Lỗi");
+            MessageDialogHelper.showErrorDialog(parentForm, e.getMessage(), "Thông báo");
         }
     }//GEN-LAST:event_btnEditActionPerformed
 

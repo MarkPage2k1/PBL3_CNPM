@@ -338,7 +338,7 @@ public class StudentDetailJDialog extends javax.swing.JDialog {
         valiDateEmpty(jBrithday, sb, "Ngày sinh không được để trống!");
         
         if (sb.length() > 0) {
-            MessageDialogHelper.showErrorDialog(parentForm, sb.toString(), "Lỗi");
+            MessageDialogHelper.showErrorDialog(parentForm, sb.toString(), "Thông báo");
             return;
         }
         boolean flag = controller.updateInforStudent(personalImage);
@@ -347,7 +347,7 @@ public class StudentDetailJDialog extends javax.swing.JDialog {
                 MessageDialogHelper.showMessageDialog(parentForm, "Thông tin sinh viên đã được lưu", "Thông báo");
                 btnCancelActionPerformed(evt);
         } else {
-            MessageDialogHelper.showConfirmDialog(parentForm, "Thông tin sinh viên không được lưu", "Cảnh báo");
+            MessageDialogHelper.showConfirmDialog(parentForm, "Thông tin sinh viên không được lưu", "Thông báo");
         }
     }//GEN-LAST:event_btnSaveActionPerformed
 
@@ -382,7 +382,7 @@ public class StudentDetailJDialog extends javax.swing.JDialog {
             
         } catch (Exception e) {
             e.printStackTrace();
-            MessageDialogHelper.showErrorDialog(parentForm, e.getMessage(), "Lỗi");
+            MessageDialogHelper.showErrorDialog(parentForm, e.getMessage(), "Thông báo");
         }
     }//GEN-LAST:event_btnLoadImgActionPerformed
     

@@ -88,7 +88,7 @@ public class TeacherManagementController {
             
         } catch (Exception e) {
             //e.printStackTrace();
-            MessageDialogHelper.showErrorDialog(parentForm, e.getMessage(), "Lỗi");
+            MessageDialogHelper.showErrorDialog(parentForm, e.getMessage(), "Thông báo");
         }
     }
     public void deleteTeachers(int rows[]){
@@ -98,8 +98,8 @@ public class TeacherManagementController {
                     idTeacher = (String) jTableTeacher.getValueAt(s, 0); 
                     TeacherService teacherService = new TeacherServiceImpl();
                     if (!teacherService.deleteTeacher(idTeacher)) {
-                        MessageDialogHelper.showErrorDialog(parentForm, "Xóa không thành công!", "Cảnh báo");
-                        MessageDialogHelper.showErrorDialog(parentForm, idTeacher + rows.length, "Cảnh báo");
+                        MessageDialogHelper.showErrorDialog(parentForm, "Bạn xóa không thành công!", "Thông báo");
+                        MessageDialogHelper.showErrorDialog(parentForm, idTeacher + rows.length, "Thông báo");
                         return;
                     } else {
                         AccountService accountService = new AccountServiceImpl();
@@ -107,13 +107,13 @@ public class TeacherManagementController {
                     }
                 }
             } else {
-                MessageDialogHelper.showErrorDialog(parentForm, "Bạn chưa chọn giảng viên cần xóa!", "Cảnh báo");  
+                MessageDialogHelper.showErrorDialog(parentForm, "Bạn chưa chọn giảng viên cần xóa!", "Thông báo");  
             } 
             loadDataTable();
-            MessageDialogHelper.showMessageDialog(parentForm, "Xóa thành công!", "Thông báo");     
+            MessageDialogHelper.showMessageDialog(parentForm, "Bạn xóa thành công!", "Thông báo");     
         } catch (Exception e) {
             //e.printStackTrace();
-            MessageDialogHelper.showErrorDialog(parentForm, e.getMessage(), "Lỗi");
+            MessageDialogHelper.showErrorDialog(parentForm, e.getMessage(), "Thông báo");
         }
     }
 }

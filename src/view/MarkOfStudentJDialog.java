@@ -363,7 +363,7 @@ public class MarkOfStudentJDialog extends javax.swing.JDialog {
         DataValiDator.valiDateEmpty(jtfMark3, sb, "Điểm lần không được để trống");
         
         if (sb.length() > 0) {
-            MessageDialogHelper.showErrorDialog(parentForm, sb.toString(), "Lỗi");
+            MessageDialogHelper.showErrorDialog(parentForm, sb.toString(), "Thông báo");
             return;
         }
         Double mark1 = Double.parseDouble(jtfMark1.getText());
@@ -375,10 +375,10 @@ public class MarkOfStudentJDialog extends javax.swing.JDialog {
                     MessageDialogHelper.showMessageDialog(parentForm, "Điểm đã được cập nhật!", "Thông báo");
                     btnCancelActionPerformed(evt);
             } else {
-                MessageDialogHelper.showConfirmDialog(parentForm, "Cập nhật không thành công!", "Cảnh báo");
+                MessageDialogHelper.showConfirmDialog(parentForm, "Bạn cập nhật không thành công!", "Thông báo");
             }
         } else {
-            MessageDialogHelper.showErrorDialog(parentForm, "Dữ liệu nhập vào không đúng!\nVui lòng kiểm tra lại!", "Lỗi!");
+            MessageDialogHelper.showErrorDialog(parentForm, "Dữ liệu nhập vào không đúng!\nVui lòng kiểm tra lại!", "Thông báo!");
         }
         
     }//GEN-LAST:event_btnOKActionPerformed
@@ -433,14 +433,14 @@ public class MarkOfStudentJDialog extends javax.swing.JDialog {
             if (mark < 0 || mark > 10){
                 jtfDiem10.setText("0.0");
                 jtfDiem4.setText("0.0");
-                MessageDialogHelper.showErrorDialog(parentForm, "Điểm nhập sai thang chuẩn 10!\nVui lòng nhập lại!", "Lỗi!!!");
+                MessageDialogHelper.showErrorDialog(parentForm, "Điểm nhập sai thang chuẩn 10!\nVui lòng nhập lại!", "Thông báo!!");
             } else {
                 CalMark();
             }
         } catch (NumberFormatException e){
             jtfDiem10.setText("0.0");
             jtfDiem4.setText("0.0");
-            MessageDialogHelper.showErrorDialog(parentForm, "Vui lòng kiểm tra lại dữ liệu nhập vào!\nHệ thống chỉ chấp nhận kiểu dữ liệu là số!", "Lỗi!!!");
+            MessageDialogHelper.showErrorDialog(parentForm, "Vui lòng kiểm tra lại dữ liệu nhập vào!\nHệ thống chỉ chấp nhận kiểu dữ liệu là số!", "Thông báo!!");
         }
     }
     

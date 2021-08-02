@@ -191,7 +191,7 @@ public class FormManagerJPanel extends javax.swing.JPanel {
             
         } catch (Exception e) {
             e.printStackTrace();
-            MessageDialogHelper.showErrorDialog(parentForm, e.getMessage(), "Lỗi");
+            MessageDialogHelper.showErrorDialog(parentForm, e.getMessage(), "Thông báo");
         }
     }//GEN-LAST:event_btnDetailActionPerformed
 
@@ -208,12 +208,12 @@ public class FormManagerJPanel extends javax.swing.JPanel {
             } else if (count < 1){
                 MessageDialogHelper.showMessageDialog(parentForm, "Vui lòng chọn một lớp để chỉnh sửa!", "Thông báo");
             } else {
-                MessageDialogHelper.showMessageDialog(parentForm, "Bạn chọn quá nhiều lớp!\nVui lòng chọn một lớp để chỉnh sửa!", "Thông báo");
+                MessageDialogHelper.showMessageDialog(parentForm, "Bạn đã chọn quá nhiều lớp!\nVui lòng chọn một lớp để chỉnh sửa!", "Thông báo");
             }
             
         } catch (Exception e) {
             e.printStackTrace();
-            MessageDialogHelper.showErrorDialog(parentForm, e.getMessage(), "Lỗi");
+            MessageDialogHelper.showErrorDialog(parentForm, e.getMessage(), "Thông báo");
         }
     }//GEN-LAST:event_btnEditActionPerformed
 
@@ -230,7 +230,7 @@ public class FormManagerJPanel extends javax.swing.JPanel {
     }//GEN-LAST:event_btnAddActionPerformed
 
     private void btnDeleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDeleteActionPerformed
-        if (MessageDialogHelper.showConfirmDialog(parentForm, "Bạn có muốn xóa khóa học này không?", "Hỏi") 
+        if (MessageDialogHelper.showConfirmDialog(parentForm, "Bạn có muốn xóa khóa học này hay không?", "Thông báo") 
                 == JOptionPane.NO_OPTION) {
             return;
         }   

@@ -297,7 +297,7 @@ public class FormDetailJDialogOfCourse extends javax.swing.JDialog {
         valiDateEmpty(jDateEnd, sb, "Ngày kết thúc khóa học không được để trống!");
         
         if (sb.length() > 0) {
-            MessageDialogHelper.showErrorDialog(parentForm, sb.toString(), "Lỗi");
+            MessageDialogHelper.showErrorDialog(parentForm, sb.toString(), "Thông báo");
             return;
         }
         boolean flag = courseController.updateInforCourse(statusShowForm);
@@ -308,7 +308,7 @@ public class FormDetailJDialogOfCourse extends javax.swing.JDialog {
         } else {
             MessageDialogHelper.showConfirmDialog(parentForm, "Thông tin lớp không được lưu\nBạn vui lòng"
                     + " kiểm tra lại dữ liệu nhập vào!\n- Nguyên nhân có thể là:\n + Mã lớp học này đã có rồi!\n"
-                    + " + Định dạng dữ liệu không hợp lệ!", "Cảnh báo");
+                    + " + Định dạng dữ liệu không hợp lệ!", "Thông báo");
         }
     }//GEN-LAST:event_btnOKActionPerformed
 

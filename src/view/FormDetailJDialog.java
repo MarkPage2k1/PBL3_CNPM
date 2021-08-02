@@ -314,7 +314,7 @@ public class FormDetailJDialog extends javax.swing.JDialog {
         valiDateEmpty(jDateStartOrReg, sb, "Ngày đăng ký không được để trống!");
         
         if (sb.length() > 0) {
-            MessageDialogHelper.showErrorDialog(parentForm, sb.toString(), "Lỗi");
+            MessageDialogHelper.showErrorDialog(parentForm, sb.toString(), "Thông báo");
             return;
         }
         boolean flag = classController.updateInforClass(((CBBItem)jComboBox1.getSelectedItem()).Value, statusShowForm);
@@ -325,7 +325,7 @@ public class FormDetailJDialog extends javax.swing.JDialog {
         } else {
             MessageDialogHelper.showConfirmDialog(parentForm, "Thông tin lớp không được lưu\nBạn vui lòng"
                     + " kiểm tra lại dữ liệu nhập vào!\n- Nguyên nhân có thể là:\n + Mã lớp học này đã có rồi!\n"
-                    + " + Định dạng dữ liệu không hợp lệ!", "Cảnh báo");
+                    + " + Định dạng dữ liệu không hợp lệ!", "Thông báo");
         }
     }//GEN-LAST:event_btnOKActionPerformed
 

@@ -420,11 +420,11 @@ public class ProfileJPanel extends javax.swing.JPanel {
         DataValiDator.valiDateEmpty(jtfProfileEmail, sb, "Email viên không được để trống");
         DataValiDator.valiDateEmpty(jtfProfilePhone, sb, "Số điện thoại không được để trống");
         if (sb.length() > 0) {
-            MessageDialogHelper.showErrorDialog(parentForm, sb.toString(), "Lỗi");
+            MessageDialogHelper.showErrorDialog(parentForm, sb.toString(), "Thông báo");
             return;
         }
         
-        if (MessageDialogHelper.showConfirmDialog(parentForm, "Bạn có muốn cập nhật lại thông tin không?", "Hỏi") 
+        if (MessageDialogHelper.showConfirmDialog(parentForm, "Bạn có muốn cập nhật lại thông tin hay không?", "Thông báo") 
                 == JOptionPane.NO_OPTION) {
             return;
         }
@@ -439,7 +439,7 @@ public class ProfileJPanel extends javax.swing.JPanel {
             
         } catch (Exception e) {
             e.printStackTrace();
-            MessageDialogHelper.showErrorDialog(parentForm, e.getMessage(), "Lỗi");
+            MessageDialogHelper.showErrorDialog(parentForm, e.getMessage(), "Thông báo");
         }
     }//GEN-LAST:event_btnProfileUpdateActionPerformed
 
@@ -452,10 +452,10 @@ public class ProfileJPanel extends javax.swing.JPanel {
 
         AdminService adminService = new AdminServiceImpl();
         if (adminService.updateProfile(ps)) {
-            MessageDialogHelper.showMessageDialog(parentForm, "Thông tin đã được cập nhật!", "Thông báo");
+            MessageDialogHelper.showMessageDialog(parentForm, "Thông tin đã được cập nhật thành công!", "Thông báo");
         }
         else {
-            MessageDialogHelper.showConfirmDialog(parentForm, "Thông tin cập nhật không thành công!", "Cảnh báo");
+            MessageDialogHelper.showConfirmDialog(parentForm, "Thông tin cập nhật không thành công!", "Thông báo");
         }
     }
     private void updateProfileTeacher(){
@@ -467,10 +467,10 @@ public class ProfileJPanel extends javax.swing.JPanel {
 
         TeacherService teacherService = new TeacherServiceImpl();
         if (teacherService.updateProfile(ps)) {
-            MessageDialogHelper.showMessageDialog(parentForm, "Thông tin đã được cập nhật!", "Thông báo");
+            MessageDialogHelper.showMessageDialog(parentForm, "Thông tin đã được cập nhật thành công!", "Thông báo");
         }
         else {
-            MessageDialogHelper.showConfirmDialog(parentForm, "Thông tin cập nhật không thành công!", "Cảnh báo");
+            MessageDialogHelper.showConfirmDialog(parentForm, "Thông tin cập nhật không thành công!", "Thông báo");
         }
     }
     private void updateProfileStudent(){
@@ -482,10 +482,10 @@ public class ProfileJPanel extends javax.swing.JPanel {
 
         StudentService studentService = new StudentServiceImpl();
         if (studentService.updateProfile(ps)) {
-            MessageDialogHelper.showMessageDialog(parentForm, "Thông tin đã được cập nhật!", "Thông báo");
+            MessageDialogHelper.showMessageDialog(parentForm, "Thông tin đã được cập nhật thành công!", "Thông báo");
         }
         else {
-            MessageDialogHelper.showConfirmDialog(parentForm, "Thông tin cập nhật không thành công!", "Cảnh báo");
+            MessageDialogHelper.showConfirmDialog(parentForm, "Thông tin cập nhật không thành công!", "Thông báo");
         }
     }
     private void btnLoadImgActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLoadImgActionPerformed
@@ -519,7 +519,7 @@ public class ProfileJPanel extends javax.swing.JPanel {
             
         } catch (Exception e) {
             e.printStackTrace();
-            MessageDialogHelper.showErrorDialog(parentForm, e.getMessage(), "Lỗi");
+            MessageDialogHelper.showErrorDialog(parentForm, e.getMessage(), "Thông báo");
         }
     }//GEN-LAST:event_btnLoadImgActionPerformed
     

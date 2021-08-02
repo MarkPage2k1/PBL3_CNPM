@@ -210,12 +210,12 @@ public class TeacherManagementJPanel extends javax.swing.JPanel {
             
         } catch (Exception e) {
             e.printStackTrace();
-            MessageDialogHelper.showErrorDialog(parentForm, e.getMessage(), "Lỗi");
+            MessageDialogHelper.showErrorDialog(parentForm, e.getMessage(), "Thông báo");
         }
     }//GEN-LAST:event_btnEditActionPerformed
 
     private void btnDeleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDeleteActionPerformed
-        if (MessageDialogHelper.showConfirmDialog(parentForm, "Bạn có muốn xóa giảng viên không?", "Hỏi") 
+        if (MessageDialogHelper.showConfirmDialog(parentForm, "Bạn có muốn xóa giảng viên hay không?", "Thông báo") 
                 == JOptionPane.NO_OPTION) {
             return;
         }     
