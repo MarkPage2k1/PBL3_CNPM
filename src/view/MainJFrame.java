@@ -35,6 +35,7 @@ public class MainJFrame extends javax.swing.JFrame {
     private FormManagerJPanel formManagerJPanel;
     private FormManagerSub formManagerSub;
     private RegisterForClassJPanel registerForClassJPanel;
+    private InformationClassJPanel informationClassJPanel;
     public String IdUserLogin;
 
     public MainJFrame() {
@@ -45,7 +46,7 @@ public class MainJFrame extends javax.swing.JFrame {
         setExtendedState(getExtendedState() | JFrame.MAXIMIZED_BOTH);
     }
 
-    //@SuppressWarnings("unchecked")
+    @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
@@ -579,9 +580,26 @@ public class MainJFrame extends javax.swing.JFrame {
     private void btn1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn1ActionPerformed
         if ("Admin".equals(sharedData.userLogin.getPosition())){
             jMenuSMActionPerformed(evt);
-        }
+        }else if ("Học Viên".equalsIgnoreCase(sharedData.userLogin.getPosition()) || 
+            "Giảng Viên".equalsIgnoreCase(sharedData.userLogin.getPosition())    ){
+           jMenuInformationClassActionPerformed(evt);
+        }   
     }//GEN-LAST:event_btn1ActionPerformed
 
+    private void jMenuInformationClassActionPerformed(java.awt.event.ActionEvent evt) {                                                      
+        if (informationClassJPanel != null) {
+            tableMainBoard.remove(informationClassJPanel);
+        }
+        try {
+            informationClassJPanel = new InformationClassJPanel();
+        } catch (Exception ex) {
+            Logger.getLogger(MainJFrame.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        ImageIcon icon = new ImageIcon(getClass().getResource("/images/add16.png"));
+        tableMainBoard.addTab("Thông tin lớp học phần", icon, informationClassJPanel, "Thông tin lớp học phần");          
+        tableMainBoard.setSelectedComponent(informationClassJPanel);
+    }   
+    
     private void jMenuRegisterForClassActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuRegisterForClassActionPerformed
         if (registerForClassJPanel != null) {
             tableMainBoard.remove(registerForClassJPanel);
