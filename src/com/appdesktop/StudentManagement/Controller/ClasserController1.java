@@ -15,7 +15,7 @@ public class ClasserController1 {
     private JCheckBox jcheckStatus;
     private JDateChooser jDateStartOrReg;
     private JTextArea jTextNote;
-    private String idCourseOld;
+    //private String idCourseOld;
     
     
 
