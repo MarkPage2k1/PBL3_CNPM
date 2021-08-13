@@ -197,7 +197,7 @@ public class RegisterForClassJPanel extends javax.swing.JPanel {
             controllerCTeacher.deleteClassOfTeacher(jTable1.getSelectedRows());
         }
         else if ("Học Viên".equalsIgnoreCase(POSITION)){
-            controllerCStudent.deleteClassOfStudent(jTable1.getSelectedColumns());
+            controllerCStudent.deleteClassOfStudent(jTable1.getSelectedRows());
         }
         
     }//GEN-LAST:event_btnDeleteActionPerformed

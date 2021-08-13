@@ -99,9 +99,10 @@ public class StudentManagementController {
                     StudentService studentService = new StudentServiceImpl();
                     if (!studentService.deleteStudent(idStudent)) {
                         MessageDialogHelper.showErrorDialog(parentForm, "Xóa không thành công!", "Cảnh báo");
-                        MessageDialogHelper.showErrorDialog(parentForm, idStudent + rows.length, "Cảnh báo");
+                        //MessageDialogHelper.showErrorDialog(parentForm, idStudent + rows.length, "Cảnh báo");
                         return;
-                    } else {
+                    } else 
+                    {
                         AccountService accountService = new AccountServiceImpl();
                         accountService.deleteAcount(idStudent);
                     }

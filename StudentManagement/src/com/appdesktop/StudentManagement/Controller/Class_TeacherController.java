@@ -165,8 +165,10 @@ public class Class_TeacherController {
                 }
                 MessageDialogHelper.showMessageDialog(parentForm, "Xóa thành công!", "Thông báo");
                 loadDataTable();
+                if(FormDetailClass.it != null)
+                {
                 FormDetailClass.it.loadtableforclass();
-                
+                }
             } else {
                 MessageDialogHelper.showErrorDialog(parentForm, "Bạn chưa chọn lớp cần xóa!", "Cảnh báo");
             }
@@ -188,8 +190,10 @@ public class Class_TeacherController {
             }
             MessageDialogHelper.showMessageDialog(parentForm, "Đăng ký thành công!", "Thông báo");
             loadDataTable();
+            if(FormDetailClass.it != null)
+            {
             FormDetailClass.it.loadtableforclass();
-
+            }
         } catch (Exception e) {
             e.printStackTrace();
             MessageDialogHelper.showErrorDialog(parentForm, e.getMessage(), "Lỗi");

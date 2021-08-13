@@ -1,6 +1,7 @@
-﻿create database CenterManagement
-use CenterManagement
+﻿create database StudentManagement
+use StudentManagement
 go
+--------------------------------------------------------------------------------------------------
 create table account
 (
 	username varchar(50) not null,
@@ -74,13 +75,6 @@ create table teacher
 	constraint pk_idteacher primary key (idteacher),
 	constraint fk_account_tch foreign key(tchaccount) references account(username)
 )
---alter table admin
---alter column adavatar binary(5000) 
---alter table teacher
---alter column tchavatar binary(5000)
---alter table student
---alter column stavatar binary(5000)
-
 -- định nghĩa 2 bảng class_student và class_teacher
 create table class_teacher
 (
@@ -146,6 +140,17 @@ END
 alter table class_teacher
 add constraint default_id
 default dbo.auto_id_class_teacher() for id_class_teacher
+
+
+
+
+
+
+
+
+
+
+
 
 --alter table class_teacher
 --add teacher_idteacher varchar(10),

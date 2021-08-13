@@ -4,14 +4,18 @@
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
             <file>file:/D:/OldFile/ThuMucD/KI%204/PBL/Demo/StudentManagement%20_Final/StudentManagement/src/view/RegisterForClassJPanel.java</file>
+            <file>file:/D:/OldFile/ThuMucD/KI%204/PBL/Demo/StudentManagement%20_Final/StudentManagement/src/view/FormDetailClass.java</file>
+            <file>file:/D:/OldFile/ThuMucD/KI%204/PBL/Demo/StudentManagement%20_Final/StudentManagement/src/com/appdesktop/StudentManagement/Dao/TeacherDAOImpl.java</file>
+            <file>file:/D:/OldFile/ThuMucD/KI%204/PBL/Demo/StudentManagement%20_Final/StudentManagement/src/com/appdesktop/StudentManagement/Controller/Class_AdminController.java</file>
+            <file>file:/D:/OldFile/ThuMucD/KI%204/PBL/Demo/StudentManagement%20_Final/StudentManagement/src/com/appdesktop/StudentManagement/Dao/StudentDAOImpl.java</file>
+            <file>file:/D:/OldFile/ThuMucD/KI%204/PBL/Demo/StudentManagement%20_Final/StudentManagement/src/com/appdesktop/StudentManagement/Controller/StudentController.java</file>
             <file>file:/D:/OldFile/ThuMucD/KI%204/PBL/Demo/StudentManagement%20_Final/StudentManagement/src/com/appdesktop/StudentManagement/Controller/Class_StudentController.java</file>
             <file>file:/D:/OldFile/ThuMucD/KI%204/PBL/Demo/StudentManagement%20_Final/StudentManagement/src/com/appdesktop/StudentManagement/Controller/Class_TeacherController.java</file>
-            <file>file:/D:/OldFile/ThuMucD/KI%204/PBL/Demo/StudentManagement%20_Final/StudentManagement/src/com/appdesktop/StudentManagement/Controller/Class_AdminController.java</file>
-            <file>file:/D:/OldFile/ThuMucD/KI%204/PBL/Demo/StudentManagement%20_Final/StudentManagement/src/com/appdesktop/StudentManagement/Controller/CourseController.java</file>
-            <file>file:/D:/OldFile/ThuMucD/KI%204/PBL/Demo/StudentManagement%20_Final/StudentManagement/src/view/FormDetailJDialog.java</file>
-            <file>file:/D:/OldFile/ThuMucD/KI%204/PBL/Demo/StudentManagement%20_Final/StudentManagement/src/view/FormManagerSub.java</file>
-            <file>file:/D:/OldFile/ThuMucD/KI%204/PBL/Demo/StudentManagement%20_Final/StudentManagement/src/view/FormManagerJPanel.java</file>
-            <file>file:/D:/OldFile/ThuMucD/KI%204/PBL/Demo/StudentManagement%20_Final/StudentManagement/src/view/FormDetailJDialogOfCourse.java</file>
+            <file>file:/D:/OldFile/ThuMucD/KI%204/PBL/Demo/StudentManagement%20_Final/StudentManagement/src/com/appdesktop/StudentManagement/Dao/StudentDAO.java</file>
+            <file>file:/D:/OldFile/ThuMucD/KI%204/PBL/Demo/StudentManagement%20_Final/StudentManagement/src/view/MainJFrame.java</file>
+            <file>file:/D:/OldFile/ThuMucD/KI%204/PBL/Demo/StudentManagement%20_Final/StudentManagement/src/com/appdesktop/StudentManagement/Dao/TeacherDAO.java</file>
+            <file>file:/D:/OldFile/ThuMucD/KI%204/PBL/Demo/StudentManagement%20_Final/StudentManagement/src/view/StudentDetailJDialog.java</file>
+            <file>file:/D:/OldFile/ThuMucD/KI%204/PBL/Demo/StudentManagement%20_Final/StudentManagement/src/com/appdesktop/StudentManagement/Controller/TeacherController.java</file>
         </group>
     </open-files>
 </project-private>

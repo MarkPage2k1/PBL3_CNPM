@@ -118,7 +118,7 @@ public class StudentDAOImpl implements StudentDAO{
     @Override
     public boolean inserStudent(Person st) {
         String sql = "INSERT INTO student(idstudent, studentname, stbirthday, stgender, "
-                + "staddress, ststatuss, stemail, stphone, stavatar, account_username)"
+                + "staddress, ststatuss, stemail, stphone, stavatar, staccount)"
                 + " values(?, ?, ?, ?, ?, ?, ?, ?, ?, ?);";
         try(
                 Connection con = DBHelper.openConnection();
@@ -152,7 +152,7 @@ public class StudentDAOImpl implements StudentDAO{
     @Override
     public boolean deleteStudent(String idStudent) {
         String sql = "DELETE FROM student "
-                + "WHERE idstudent = ?  and account_username = ?;";
+                + "WHERE idstudent = ?  and staccount = ?;";
         try(
                 Connection con = DBHelper.openConnection();
                 PreparedStatement patmt = con.prepareStatement(sql);

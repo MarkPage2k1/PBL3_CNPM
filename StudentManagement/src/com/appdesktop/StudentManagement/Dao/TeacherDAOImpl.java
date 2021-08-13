@@ -117,7 +117,7 @@ public class TeacherDAOImpl implements TeacherDAO{
     @Override
     public boolean inserTeacher(Person teacher) {
         String sql = "INSERT INTO teacher(idteacher, tchname, tchbirthday, tchgender, "
-                + "tchaddress, tchstatus, tchemail, tchphone, tchavatar, account_username)"
+                + "tchaddress, tchstatus, tchemail, tchphone, tchavatar, tchaccount)"
                 + " values(?, ?, ?, ?, ?, ?, ?, ?, ?, ?);";
         try(
                 Connection con = DBHelper.openConnection();
@@ -150,7 +150,7 @@ public class TeacherDAOImpl implements TeacherDAO{
     @Override
     public boolean deleteTeacher(String idTeacher) {
         String sql = "DELETE FROM teacher "
-                + "WHERE idteacher = ?  and account_username = ?;";
+                + "WHERE idteacher = ?  and tchaccount = ?;";
         try(
                 Connection con = DBHelper.openConnection();
                 PreparedStatement patmt = con.prepareStatement(sql);
