@@ -313,7 +313,6 @@ public class FormDetailJDialogOfCourse extends javax.swing.JDialog {
             MessageDialogHelper.showMessageDialog(parentForm, "Thông tin lớp đã được lưu", "Thông báo");
             if (FormManagerJPanel.it != null) {
                 FormManagerJPanel.it.loadCbb();
-
             }
             if (FormDetailClass.it != null) {
                 FormDetailClass.it.loadCbb();

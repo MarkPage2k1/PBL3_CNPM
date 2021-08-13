@@ -184,8 +184,9 @@ public class Class_StudentController {
                         return;
                     }
                 }
-                loadDataTableRegisted();
                 MessageDialogHelper.showMessageDialog(parentForm, "Xóa thành công!", "Thông báo");
+                loadDataTableRegisted();
+                FormDetailClass.it.loadtableforclass();
             } else {
                 MessageDialogHelper.showErrorDialog(parentForm, "Bạn chưa chọn lớp cần xóa!", "Cảnh báo");  
             } 

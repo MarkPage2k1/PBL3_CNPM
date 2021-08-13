@@ -136,11 +136,6 @@ public class FormDetailClass extends javax.swing.JPanel {
         jLabel1.setText("Khóa học");
 
         jComboBox.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
-        jComboBox.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jComboBoxActionPerformed(evt);
-            }
-        });
 
         jTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -276,11 +271,6 @@ public class FormDetailClass extends javax.swing.JPanel {
     private void btnDeleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDeleteActionPerformed
         class_admincontrollder.DeleteClass_Admin(jTable.getSelectedRows());
     }//GEN-LAST:event_btnDeleteActionPerformed
-
-    private void jComboBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBoxActionPerformed
-//        String id = ((CBBItem)jComboBox.getSelectedItem()).Value;
-//           class_admincontrollder.Loadtable(id);
-    }//GEN-LAST:event_jComboBoxActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

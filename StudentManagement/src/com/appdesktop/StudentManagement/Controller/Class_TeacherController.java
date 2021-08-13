@@ -7,8 +7,6 @@ import com.appdesktop.StudentManagement.Model.Class_Teacher;
 import com.appdesktop.StudentManagement.Model.studentOfClass;
 import com.appdesktop.StudentManagement.Service.Class_TeacherService;
 import com.appdesktop.StudentManagement.Service.Class_TeacherServiceImpl;
-import com.appdesktop.StudentManagement.Service.ClasserService;
-import com.appdesktop.StudentManagement.Service.ClasserServiceImpl;
 import java.util.List;
 import javax.swing.JComboBox;
 import javax.swing.JFrame;
@@ -165,8 +163,10 @@ public class Class_TeacherController {
                         return;
                     }
                 }
-                loadDataTable();
                 MessageDialogHelper.showMessageDialog(parentForm, "Xóa thành công!", "Thông báo");
+                loadDataTable();
+                FormDetailClass.it.loadtableforclass();
+                
             } else {
                 MessageDialogHelper.showErrorDialog(parentForm, "Bạn chưa chọn lớp cần xóa!", "Cảnh báo");
             }
