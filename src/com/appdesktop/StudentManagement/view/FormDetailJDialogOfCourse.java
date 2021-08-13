@@ -295,6 +295,7 @@ public class FormDetailJDialogOfCourse extends javax.swing.JDialog {
         DataValiDator.valiDateEmpty(jTextNote, sb, "Ghi chú không được để trống");
         valiDateEmpty(jDateStartOrReg, sb, "Ngày bắt đầu khóa học không được để trống!");
         valiDateEmpty(jDateEnd, sb, "Ngày kết thúc khóa học không được để trống!");
+        DataValiDator.checkDateValid(sb, "Ngày bắt đầu không thể lớn hơn ngày kết thúc!", jDateStartOrReg, jDateEnd);
         
         if (sb.length() > 0) {
             MessageDialogHelper.showErrorDialog(parentForm, sb.toString(), "Thông báo");
