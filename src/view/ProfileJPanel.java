@@ -417,8 +417,8 @@ public class ProfileJPanel extends javax.swing.JPanel {
     
     private void btnProfileUpdateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnProfileUpdateActionPerformed
         StringBuilder sb = new StringBuilder();
-        DataValiDator.valiDateEmpty(jtfProfileEmail, sb, "Email viên không được để trống");
-        DataValiDator.valiDateEmpty(jtfProfilePhone, sb, "Số điện thoại không được để trống");
+        DataValiDator.valiDateEmpty(jtfProfileEmail, sb, "Sai dạng địa chỉ email");
+        DataValiDator.valiDateEmpty(jtfProfilePhone, sb, "Sai dạng địa chỉ số điện thoại");
         if (sb.length() > 0) {
             MessageDialogHelper.showErrorDialog(parentForm, sb.toString(), "Thông báo");
             return;

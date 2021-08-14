@@ -202,7 +202,7 @@ public class FormManagerSub extends javax.swing.JPanel {
     }//GEN-LAST:event_btnAddActionPerformed
 
     private void btnDeleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDeleteActionPerformed
-        if (MessageDialogHelper.showConfirmDialog(parentForm, "Bạn có muốn xóa khóa học này không?", "Hỏi") 
+        if (MessageDialogHelper.showConfirmDialog(parentForm, "Bạn có muốn xóa khóa học này không?", "Thông báo") 
                 == JOptionPane.NO_OPTION) {
             return;
         }   

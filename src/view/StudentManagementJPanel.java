@@ -212,7 +212,7 @@ public class StudentManagementJPanel extends javax.swing.JPanel {
     }//GEN-LAST:event_btnEditActionPerformed
 
     private void btnDeleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDeleteActionPerformed
-        if (MessageDialogHelper.showConfirmDialog(parentForm, "Bạn có muốn xóa sinh viên không?", "Thông báo") 
+        if (MessageDialogHelper.showConfirmDialog(parentForm, "Bạn có muốn xóa sinh viên hay không?", "Thông báo") 
                 == JOptionPane.NO_OPTION) {
             return;
         }   

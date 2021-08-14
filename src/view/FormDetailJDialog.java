@@ -308,10 +308,10 @@ public class FormDetailJDialog extends javax.swing.JDialog {
 
     private void btnOKActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnOKActionPerformed
         StringBuilder sb = new StringBuilder();
-        DataValiDator.valiDateEmpty(jtfID, sb, "Mã lớp học không được để trống!");
-        DataValiDator.valiDateEmpty(jtfName, sb, "Tên lớp học không được để trống!");
-        DataValiDator.valiDateEmpty(jTextNote, sb, "Ghi chú không được để trống");
-        valiDateEmpty(jDateStartOrReg, sb, "Ngày đăng ký không được để trống!");
+        DataValiDator.valiDateEmpty(jtfID, sb, "Sai định dạng địa chỉ mã lớp học!");
+        DataValiDator.valiDateEmpty(jtfName, sb, "Sai định dạng địa chỉ tên lớp học!");
+        DataValiDator.valiDateEmpty(jTextNote, sb, "Sai định dạng địa chỉ ghi chú!");
+        valiDateEmpty(jDateStartOrReg, sb, "Sai định dạng địa chỉ ngày đăng ký!");
         
         if (sb.length() > 0) {
             MessageDialogHelper.showErrorDialog(parentForm, sb.toString(), "Thông báo");
