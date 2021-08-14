@@ -1,6 +1,6 @@
 package com.appdesktop.StudentManagement.Main;
 
-import view.LoginJDialog;
+import com.appdesktop.StudentManagement.view.LoginJDialog;
 
 public class Main {
     public static void main(String[] args) {

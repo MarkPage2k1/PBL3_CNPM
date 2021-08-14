@@ -6,7 +6,7 @@ import com.appdesktop.StudentManagement.Model.Account;
 import com.appdesktop.StudentManagement.Service.AccountService;
 import com.appdesktop.StudentManagement.Service.AccountServiceImpl;
 import javax.swing.JDialog;
-import view.MainJFrame;
+import com.appdesktop.StudentManagement.view.MainJFrame;
 
 public class AccountController {
     private AccountService accountService = null;

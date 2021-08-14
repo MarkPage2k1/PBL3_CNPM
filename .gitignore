@@ -1,6 +1,1 @@
-nbproject/
-build/
-dist/*.txt
-*.xml
-*.mf
-
+bin/
