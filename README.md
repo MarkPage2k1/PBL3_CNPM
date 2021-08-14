@@ -19,16 +19,16 @@
   - B1: Cài đặt các ứng dụng cần thiết: [Visual Studio Code](https://visualstudio.microsoft.com/), [MySQL](https://www.mysql.com/downloads/), [JDK 11](https://docs.aws.amazon.com/corretto/latest/corretto-11-ug/downloads-list.html).
   - B2: Tải Source Code về máy. (Có thể tải dạng file .zip rồi giải nén, hoặc git clone về nếu máy đã cài đặt git).
   - B3: Cấu hình Visual Studio Code:
-  ![Image](src\images\setupVSCode.PNG)
+  ![Image](./src/images/setupVSCode.PNG)
     > Cài "Java Extension Pack" để có thể chạy được project.
   - B4: Cấu hình cơ sở dữ liệu của ứng dụng:
-  ![Image](https://code.visualstudio.com/opengraphimg/opengraph-home.png)
-    > Lấy file cấu hình [Tại đây](Documents\SQL\Diagram.mwb). Username và Password để kết nối cơ sở sở liệu là root/root. Nhưng nếu máy bạn cấu hình khác thì thay đổi [Tại đây](src\com\appdesktop\StudentManagement\DBHelpers\DBHelper.java) để có thể kết nối thành công.
+  ![Image]()
+    > Lấy file cấu hình [Tại đây](./Documents/SQL/Diagram.mwb). Username và Password để kết nối cơ sở sở liệu là root/root. Nhưng nếu máy bạn cấu hình khác thì thay đổi [Tại đây](./src/com/appdesktop/StudentManagement/DBHelpers/DBHelper.java) để có thể kết nối thành công.
  ### Khởi chạy ứng dụng:
   - Thêm dữ liệu tài khoản admin vào cơ sở dữ liệu:
-  ![Image](src\images\setUpDataAdmin.gif)
+  ![Image](./src/images/setUpDataAdmin.gif)
   - Khởi chạy ứng dụng với Visual Studio Code:
-  ![Image](src\images\runWithVSCode.gif)
+  ![Image](./src/images/runWithVSCode.gif)
     > Tìm đến file Main.java theo đường dẫn "src\com\appdesktop\StudentManagement\Main\Main.java".
  ### Một vài chức năng của ứng dụng:
   - Chức năng quản lý sinh viên (bao gồm thêm, sửa, xóa, cập nhật, và tìm kiếm):
