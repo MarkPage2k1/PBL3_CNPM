@@ -218,7 +218,7 @@ public class RegisterForClassJPanel extends javax.swing.JPanel {
         } else if (row > 1){
             MessageDialogHelper.showErrorDialog(parentForm, "Chỉ đăng ký được 1 lớp trên 1 lần đăng ký!", "Thông báo");  
         } else {
-            MessageDialogHelper.showErrorDialog(parentForm, "Bạn hãy chọn lớp cần đăng ký!", "Thông báo");  
+            MessageDialogHelper.showErrorDialog(parentForm, "Bạn chưa chọn lớp cần đăng ký!", "Thông báo");  
         }
     }//GEN-LAST:event_btnRegisterActionPerformed
  

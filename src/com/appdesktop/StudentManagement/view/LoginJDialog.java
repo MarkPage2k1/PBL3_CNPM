@@ -146,10 +146,10 @@ public class LoginJDialog extends javax.swing.JDialog {
 
     private void btnLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLoginActionPerformed
         StringBuilder sb = new StringBuilder();
-        DataValiDator.valiDateEmpty(jtfUsername, sb, "Kiểm tra lại tên đăng nhập");
-        DataValiDator.valiDateEmpty(jpassword, sb, "Kiểm tra lại mật khẩu");
+        DataValiDator.valiDateEmpty(jtfUsername, sb, "Tên đăng nhập không được để trống");
+        DataValiDator.valiDateEmpty(jpassword, sb, "Mật khẩu không được để trống");
         if (sb.length() > 0) {
-            MessageDialogHelper.showErrorDialog(this, sb.toString(), "Thông báo");
+            MessageDialogHelper.showErrorDialog(this, sb.toString(), "Lỗi");
             return;
         }
         AccountController controller = new AccountController(this);

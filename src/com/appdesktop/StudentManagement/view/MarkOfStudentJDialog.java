@@ -439,7 +439,7 @@ public class MarkOfStudentJDialog extends javax.swing.JDialog {
         } catch (NumberFormatException e){
             jtfDiem10.setText("0.0");
             jtfDiem4.setText("0.0");
-            MessageDialogHelper.showErrorDialog(parentForm, "Kiểm tra lại dữ liệu nhập vào!\nHệ thống chỉ chấp nhận kiểu dữ liệu là số!", "Thông báo!!");
+            MessageDialogHelper.showErrorDialog(parentForm, "Vui lòng kiểm tra lại dữ liệu nhập vào!\nHệ thống chỉ chấp nhận kiểu dữ liệu là số!", "Thông báo!!");
         }
     }
     

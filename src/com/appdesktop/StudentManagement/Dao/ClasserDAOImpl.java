@@ -31,7 +31,8 @@ public class ClasserDAOImpl implements ClasserDAO{
                     classer.setClassName(rs.getString("classname"));
                     classer.setStatus(rs.getBoolean("status"));
                     classer.setRemark(rs.getString("remark"));
-                    classer.setRegistrationdate(rs.getDate("registrationdate"));
+                    classer.setStartDate(rs.getDate("startdate"));
+                    classer.setEndDate(rs.getDate("enddate"));
                     classer.setCourse_idcourse(rs.getString("course_idcourse"));
                     list.add(classer);
                 }   
@@ -58,7 +59,8 @@ public class ClasserDAOImpl implements ClasserDAO{
                     classer.setClassName(rs.getString("classname"));
                     classer.setStatus(rs.getBoolean("status"));
                     classer.setRemark(rs.getString("remark"));
-                    classer.setRegistrationdate(rs.getDate("registrationdate"));
+                    classer.setStartDate(rs.getDate("startdate"));
+                    classer.setEndDate(rs.getDate("enddate"));
                     classer.setCourse_idcourse(rs.getString("course_idcourse"));
                     return classer;
                 }                  
@@ -72,18 +74,19 @@ public class ClasserDAOImpl implements ClasserDAO{
     @Override
     public boolean updateInforClass(Classer classer, String idCourseOld) {
         String sql = "UPDATE student_management.class " + " SET classname = ?, status = ?, "
-                + "remark = ?, registrationdate = ?, course_idcourse = ? where idclass = ? and course_idcourse = ?;";
+                + "remark = ?, startdate = ?, enddate = ?, course_idcourse = ? where idclass = ? and course_idcourse = ?;";
         try(
                 Connection con = com.appdesktop.StudentManagement.DBHelpers.DBHelper.openConnection();
                 PreparedStatement patmt = con.prepareStatement(sql);
            ) {
-            patmt.setString(7, idCourseOld);
-            patmt.setString(6, classer.getIdClass());
+            patmt.setString(8, idCourseOld);
+            patmt.setString(7, classer.getIdClass());
             patmt.setString(1, classer.getClassName());
             patmt.setBoolean(2, classer.isStatus());
             patmt.setString(3, classer.getRemark());
-            patmt.setDate(4, (Date) classer.getRegistrationdate());
-            patmt.setString(5, classer.getCourse_idcourse());           
+            patmt.setDate(4, (Date) classer.getStartDate());
+            patmt.setDate(5, (Date) classer.getEndDate());
+            patmt.setString(6, classer.getCourse_idcourse());           
             return patmt.executeUpdate() > 0;
         } catch (SQLException ex) {
             ex.printStackTrace();
@@ -93,8 +96,8 @@ public class ClasserDAOImpl implements ClasserDAO{
 
     @Override
     public boolean insertInforClass(Classer classer) {
-        String sql = "INSERT INTO student_management.class(idclass, classname, status, remark, registrationdate, course_idcourse) "
-                + " values(?, ?, ?, ?, ?, ?);";
+        String sql = "INSERT INTO student_management.class(idclass, classname, status, remark, startdate, enddate, course_idcourse) "
+                + " values(?, ?, ?, ?, ?, ?, ?);";
         try(
                 Connection con = com.appdesktop.StudentManagement.DBHelpers.DBHelper.openConnection();
                 PreparedStatement pstmt = con.prepareStatement(sql);
@@ -103,8 +106,9 @@ public class ClasserDAOImpl implements ClasserDAO{
             pstmt.setString(2, classer.getClassName());
             pstmt.setBoolean(3, classer.isStatus());
             pstmt.setString(4, classer.getRemark());
-            pstmt.setDate(5, new Date(classer.getRegistrationdate().getTime()));
-            pstmt.setString(6, classer.getCourse_idcourse());
+            pstmt.setDate(5, new Date(classer.getStartDate().getTime()));
+            pstmt.setDate(6, new Date(classer.getEndDate().getTime()));
+            pstmt.setString(7, classer.getCourse_idcourse());
             return pstmt.executeUpdate() > 0;
         } catch (SQLException ex) {
             Logger.getLogger(StudentDAOImpl.class.getName()).log(Level.SEVERE, null, ex);

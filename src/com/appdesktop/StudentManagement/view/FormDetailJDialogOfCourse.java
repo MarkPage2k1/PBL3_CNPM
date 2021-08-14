@@ -145,7 +145,7 @@ public class FormDetailJDialogOfCourse extends javax.swing.JDialog {
 
         jLabel6.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         jLabel6.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jLabel6.setText("Ngày đăng ký");
+        jLabel6.setText("Ngày bắt đầu");
 
         btnOK.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         btnOK.setText("OK");
@@ -290,20 +290,12 @@ public class FormDetailJDialogOfCourse extends javax.swing.JDialog {
 
     private void btnOKActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnOKActionPerformed
         StringBuilder sb = new StringBuilder();
-<<<<<<< HEAD:src/view/FormDetailJDialogOfCourse.java
-        DataValiDator.valiDateEmpty(jtfID, sb, "Sai định dạng địa chỉ khóa học!");
-        DataValiDator.valiDateEmpty(jtfName, sb, "Sai định dạng địa chỉ khóa học!");
-        DataValiDator.valiDateEmpty(jTextNote, sb, "Sai định dạng địa chỉ ghi chú!");
-        valiDateEmpty(jDateStartOrReg, sb, "Sai định dạng địa chỉ ngày bắt đầu khóa học!");
-        valiDateEmpty(jDateEnd, sb, "Sai định dạng địa chỉ ngày kết thúc khóa học!");
-=======
         DataValiDator.valiDateEmpty(jtfID, sb, "Mã khóa học không được để trống!");
         DataValiDator.valiDateEmpty(jtfName, sb, "Tên khóa học không được để trống!");
         DataValiDator.valiDateEmpty(jTextNote, sb, "Ghi chú không được để trống");
         valiDateEmpty(jDateStartOrReg, sb, "Ngày bắt đầu khóa học không được để trống!");
         valiDateEmpty(jDateEnd, sb, "Ngày kết thúc khóa học không được để trống!");
         DataValiDator.checkDateValid(sb, "Ngày bắt đầu không thể lớn hơn ngày kết thúc!", jDateStartOrReg, jDateEnd);
->>>>>>> 334369964f7cb1eca35fb9122ced207f3171c1f4:src/com/appdesktop/StudentManagement/view/FormDetailJDialogOfCourse.java
         
         if (sb.length() > 0) {
             MessageDialogHelper.showErrorDialog(parentForm, sb.toString(), "Thông báo");

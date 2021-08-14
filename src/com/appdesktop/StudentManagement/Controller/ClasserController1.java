@@ -14,6 +14,7 @@ public class ClasserController1 {
     private JTextField jtfNameClass, jtfIdClass, jtfNameCourse, jtfIdCourse;
     private JCheckBox jcheckStatus;
     private JDateChooser jDateStartOrReg;
+    private JDateChooser jDateEnd;
     private JTextArea jTextNote;
     //private String idCourseOld;
     
@@ -46,7 +47,8 @@ public class ClasserController1 {
                 jtfIdCourse.setText(classer.getCourse_idcourse());
                 //jtfNameCourse.setText(classer.getCourse_coursename());
                 jcheckStatus.setSelected(classer.isStatus());
-                jDateStartOrReg.setDate(classer.getRegistrationdate());
+                jDateStartOrReg.setDate(classer.getStartDate());
+                jDateEnd.setDate(classer.getEndDate());
                 jTextNote.setText(classer.getRemark());
                 //courseController.setCbbOfCourse();
 

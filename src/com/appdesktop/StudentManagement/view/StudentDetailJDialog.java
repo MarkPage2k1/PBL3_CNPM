@@ -330,12 +330,12 @@ public class StudentDetailJDialog extends javax.swing.JDialog {
 
     private void btnSaveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSaveActionPerformed
         StringBuilder sb = new StringBuilder();
-        DataValiDator.valiDateEmpty(jtfIdStudent, sb, "Sai định dạng địa chỉ Mã sinh viên!");
-        DataValiDator.valiDateEmpty(jtfName, sb, "Sai định dạng địa chỉ Tên sinh viên!");
-        DataValiDator.valiDateEmpty(jtfEmail, sb, "Sai định dạng địa chỉ Email!");
-        DataValiDator.valiDateEmpty(jtfPhone, sb,"Sai định dạng địa chỉ Số điện thoại!");
-        DataValiDator.valiDateEmpty(jAddress, sb, "Sai định dạng địa chỉ Địa chỉ ");
-        valiDateEmpty(jBrithday, sb, "Sai định dạng địa chỉ Ngày sinh!");
+        DataValiDator.valiDateEmpty(jtfIdStudent, sb, "Mã sinh viên không được để trống!");
+        DataValiDator.valiDateEmpty(jtfName, sb, "Tên sinh viên không được để trống!");
+        DataValiDator.valiDateEmpty(jtfEmail, sb, "Email không được để trống!");
+        DataValiDator.valiDateEmpty(jtfPhone, sb,"Số điện thoại không được để trống!");
+        DataValiDator.valiDateEmpty(jAddress, sb, "Địa chỉ không được để trống");
+        valiDateEmpty(jBrithday, sb, "Ngày sinh không được để trống!");
         
         if (sb.length() > 0) {
             MessageDialogHelper.showErrorDialog(parentForm, sb.toString(), "Thông báo");

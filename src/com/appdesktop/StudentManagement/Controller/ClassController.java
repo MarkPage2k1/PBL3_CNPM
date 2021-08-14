@@ -67,7 +67,8 @@ public class ClassController {
             if (classer != null) {           
                 jtfClassName.setText(classer.getClassName());
                 jcheckStatus.setSelected(classer.isStatus());
-                jDateStartOrReg.setDate(classer.getRegistrationdate());
+                jDateStartOrReg.setDate(classer.getStartDate());
+                jDateEnd.setDate(classer.getEndDate());
                 jTextNote.setText(classer.getRemark());
                 courseController.setCbbOfCourse();
                 String idCourse = null; 
@@ -92,7 +93,8 @@ public class ClassController {
             classer.setIdClass(jtfIdClass.getText());
             classer.setClassName(jtfClassName.getText());
             classer.setStatus(jcheckStatus.isSelected());
-            classer.setRegistrationdate(convertDateToDateSql(jDateStartOrReg.getDate()));
+            classer.setStartDate(convertDateToDateSql(jDateStartOrReg.getDate()));
+            classer.setEndDate(convertDateToDateSql(jDateEnd.getDate()));
             classer.setRemark(jTextNote.getText());
             classer.setCourse_idcourse(idCourse);
               

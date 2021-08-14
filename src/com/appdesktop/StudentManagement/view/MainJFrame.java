@@ -580,7 +580,7 @@ public class MainJFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_jMenuSMActionPerformed
 
     private void btn1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn1ActionPerformed
-        if ("Admin".equals(sharedData.userLogin.getPosition())){
+        if ("Admin".equalsIgnoreCase(sharedData.userLogin.getPosition())){
             jMenuSMActionPerformed(evt);
         }else if ("Học Viên".equalsIgnoreCase(sharedData.userLogin.getPosition()) || 
             "Giảng Viên".equalsIgnoreCase(sharedData.userLogin.getPosition())    ){

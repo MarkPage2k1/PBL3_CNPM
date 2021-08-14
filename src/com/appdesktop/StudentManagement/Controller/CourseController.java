@@ -93,9 +93,9 @@ public class CourseController {
     }
     
     public void initTableOfclass() {
-         tblModle = new DefaultTableModel();
-         tblModle.setColumnIdentifiers(new String[] {"Mã lớp học", "Tên lớp học", "Ngày tạo lớp học", "Tình trạng", "Ghi chú"});
-         jTable.setModel(tblModle);
+        tblModle = new DefaultTableModel();
+        tblModle.setColumnIdentifiers(new String[] {"Mã lớp học", "Tên lớp học", "Ngày bắt đầu", "Ngày kết thúc", "Tình trạng", "Ghi chú"});
+        jTable.setModel(tblModle);
     } 
    
     public void loadDataTableOfclass() {
@@ -108,7 +108,8 @@ public class CourseController {
                 tblModle.addRow(new Object[] {
                     i.getIdClass(),
                     i.getClassName(),
-                    i.getRegistrationdate(),
+                    i.getStartDate(),
+                    i.getEndDate(),
                     i.isStatus() ? "Hoạt động" : "Khóa",
                     i.getRemark()
             });

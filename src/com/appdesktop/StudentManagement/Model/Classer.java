@@ -7,7 +7,8 @@ public class Classer {
     private String className;
     private boolean status;
     private String remark;
-    private Date registrationdate;
+    private Date startDate;
+    private Date endDate;
     private String course_idcourse;
 
     public String getIdClass() {
@@ -42,12 +43,20 @@ public class Classer {
         this.remark = remark;
     }
 
-    public Date getRegistrationdate() {
-        return registrationdate;
+    public Date getStartDate() {
+        return startDate;
     }
 
-    public void setRegistrationdate(Date registrationdate) {
-        this.registrationdate = registrationdate;
+    public void setStartDate(Date startDate) {
+        this.startDate = startDate;
+    }
+
+    public Date getEndDate() {
+        return endDate;
+    }
+
+    public void setEndDate(Date endDate) {
+        this.endDate = endDate;
     }
 
     public String getCourse_idcourse() {
@@ -56,7 +65,5 @@ public class Classer {
 
     public void setCourse_idcourse(String course_idcourse) {
         this.course_idcourse = course_idcourse;
-    }
-    
-    
+    } 
 }

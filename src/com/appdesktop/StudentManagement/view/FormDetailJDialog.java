@@ -54,8 +54,7 @@ public class FormDetailJDialog extends javax.swing.JDialog {
         jcheckStatus.setEnabled(false);
         jComboBox1.setEnabled(false);
         jDateStartOrReg.setEnabled(false);
-        jlbEndDate.setVisible(false);
-        jDateEnd.setVisible(false);
+        jDateEnd.setEnabled(false);
         jTextNote.setEnabled(false);
         btnOK.setVisible(false);        
         
@@ -65,19 +64,14 @@ public class FormDetailJDialog extends javax.swing.JDialog {
     }
     
     private void ShowFormEdit(){
-        jtfID.setEnabled(false);
-        jlbEndDate.setVisible(false);
-        jDateEnd.setVisible(false);        
+        jtfID.setEnabled(false);       
         
-        jtfID.setText(id);        
+        //jtfID.setText(id);        
         classController.loadInforClass();
         
     }
     
-    private void ShowFormAdd(){
-        jlbEndDate.setVisible(false);
-        jDateEnd.setVisible(false);        
-        
+    private void ShowFormAdd(){      
         CourseController courseController = new CourseController(jComboBox1);
         courseController.setCbbOfCourse();
     }
@@ -118,7 +112,7 @@ public class FormDetailJDialog extends javax.swing.JDialog {
         jlbTitle.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
         jlbTitle.setForeground(new java.awt.Color(0, 153, 204));
         jlbTitle.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jlbTitle.setText("Thông tin khóa học");
+        jlbTitle.setText("Thông tin lớp học");
 
         jLabel1.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
@@ -161,7 +155,7 @@ public class FormDetailJDialog extends javax.swing.JDialog {
 
         jLabel6.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         jLabel6.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jLabel6.setText("Ngày đăng ký");
+        jLabel6.setText("Ngày bắt đầu");
 
         btnOK.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         btnOK.setText("OK");
@@ -308,10 +302,12 @@ public class FormDetailJDialog extends javax.swing.JDialog {
 
     private void btnOKActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnOKActionPerformed
         StringBuilder sb = new StringBuilder();
-        DataValiDator.valiDateEmpty(jtfID, sb, "Sai định dạng địa chỉ mã lớp học!");
-        DataValiDator.valiDateEmpty(jtfName, sb, "Sai định dạng địa chỉ tên lớp học!");
-        DataValiDator.valiDateEmpty(jTextNote, sb, "Sai định dạng địa chỉ ghi chú!");
-        valiDateEmpty(jDateStartOrReg, sb, "Sai định dạng địa chỉ ngày đăng ký!");
+        DataValiDator.valiDateEmpty(jtfID, sb, "Mã lớp học không được để trống!");
+        DataValiDator.valiDateEmpty(jtfName, sb, "Tên lớp học không được để trống!");
+        DataValiDator.valiDateEmpty(jTextNote, sb, "Ghi chú không được để trống");
+        valiDateEmpty(jDateStartOrReg, sb, "Ngày đăng ký không được để trống!");
+
+        DataValiDator.checkDateValid(sb, "Ngày bắt đầu không thể lớn hơn ngày kết thúc!", jDateStartOrReg, jDateEnd);
         
         if (sb.length() > 0) {
             MessageDialogHelper.showErrorDialog(parentForm, sb.toString(), "Thông báo");

@@ -31,11 +31,11 @@ public class ProfileJPanel extends javax.swing.JPanel {
     
     public ProfileJPanel() throws Exception {
         initComponents();
-        if ("Giảng Viên".equals(POSITION)){
+        if ("Giảng Viên".equalsIgnoreCase(POSITION)){
             LoadInforUserTeacher();
-        } else if ("Học Viên".equals(POSITION)){
+        } else if ("Học Viên".equalsIgnoreCase(POSITION)){
             LoadInforUserStudent();
-        } else if ("Admin".equals(POSITION)){
+        } else if ("Admin".equalsIgnoreCase(POSITION)){
             LoadInforUserAdmin();
         }
     }
@@ -417,8 +417,8 @@ public class ProfileJPanel extends javax.swing.JPanel {
     
     private void btnProfileUpdateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnProfileUpdateActionPerformed
         StringBuilder sb = new StringBuilder();
-        DataValiDator.valiDateEmpty(jtfProfileEmail, sb, "Sai dạng địa chỉ email");
-        DataValiDator.valiDateEmpty(jtfProfilePhone, sb, "Sai dạng địa chỉ số điện thoại");
+        DataValiDator.valiDateEmpty(jtfProfileEmail, sb, "Email viên không được để trống");
+        DataValiDator.valiDateEmpty(jtfProfilePhone, sb, "Số điện thoại không được để trống");
         if (sb.length() > 0) {
             MessageDialogHelper.showErrorDialog(parentForm, sb.toString(), "Thông báo");
             return;
@@ -429,11 +429,11 @@ public class ProfileJPanel extends javax.swing.JPanel {
             return;
         }
         try {
-            if ("Giảng Viên".equals(POSITION)){
+            if ("Giảng Viên".equalsIgnoreCase(POSITION)){
                 updateProfileTeacher();
-            } else if ("Học Viên".equals(POSITION)){
+            } else if ("Học Viên".equalsIgnoreCase(POSITION)){
                 updateProfileStudent();
-            } else if ("Admin".equals(POSITION)){
+            } else if ("Admin".equalsIgnoreCase(POSITION)){
                 updateProfileAdmin();
             }
             
