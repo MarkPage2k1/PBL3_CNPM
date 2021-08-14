@@ -147,13 +147,25 @@ public class Class_StudentController {
             e.printStackTrace();
         }
     }
-    
+    public boolean isClassExist(String idclass, String idCourse)
+    {
+        for(Class_Student cst :cStudentService.getAllClassOfStudent(IDUSER))
+        {
+            if(cst.getIdClass().equals(idclass) && cst.getIdCourse().equals(idCourse))
+            {
+                return true;
+            }
+        }
+        return false;
+    }
     public void registerClassOfStudent(String idClass, String idCourse){       
         try {    
             if (MessageDialogHelper.showConfirmDialog(parentForm, "Bạn có muốn đăng ký lớp học này?", "Hỏi") 
                 == JOptionPane.NO_OPTION) {
                 return;
             } 
+            if(!isClassExist(idClass, idCourse))
+            {
             if (!cStudentService.registerClassOfStudent(idClass, idCourse, IDUSER)) {
                 MessageDialogHelper.showErrorDialog(parentForm, "Đăng ký không thành công!", "Cảnh báo");                      
                 return;
@@ -164,6 +176,11 @@ public class Class_StudentController {
                 {
                 FormDetailClass.it.loadtableforclass();
                 }
+            }
+            else
+            {
+                MessageDialogHelper.showErrorDialog(parentForm, "Bạn đã đăng kí lớp học phần này", "Cảnh báo");
+            }
         } catch (Exception e) {
             e.printStackTrace();
             MessageDialogHelper.showErrorDialog(parentForm, e.getMessage(), "Lỗi");

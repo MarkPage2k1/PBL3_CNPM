@@ -5,6 +5,7 @@ import com.appdesktop.StudentManagement.DBHelpers.sharedData;
 import com.appdesktop.StudentManagement.Model.CBBItem;
 import com.appdesktop.StudentManagement.Model.Class_Teacher;
 import com.appdesktop.StudentManagement.Model.studentOfClass;
+import com.appdesktop.StudentManagement.Service.Class_StudentService;
 import com.appdesktop.StudentManagement.Service.Class_TeacherService;
 import com.appdesktop.StudentManagement.Service.Class_TeacherServiceImpl;
 import java.util.List;
@@ -177,13 +178,26 @@ public class Class_TeacherController {
             MessageDialogHelper.showErrorDialog(parentForm, e.getMessage(), "Lỗi");
         }
     }
-
-    public void registerClassOfTeacher(String idClass, String idCourse) {
+    public boolean isClassExist(String idclass, String idCourse)
+    {
+        for(Class_Teacher cteacher :cTeacherService.getAllClassOfTeacher(IDUSER))
+        {
+            if(cteacher.getIdClass().equals(idclass) && cteacher.getIdCourse().equals(idCourse))
+            {
+                return true;
+            }
+        }
+        return false;
+    }
+    public void registerClassOfTeacher(String idClass, String idCourse) 
+    {
         try {
             if (MessageDialogHelper.showConfirmDialog(parentForm, "Bạn có muốn đăng ký lớp học này?", "Hỏi")
                     == JOptionPane.NO_OPTION) {
                 return;
             }
+            if(!isClassExist(idClass, idCourse))
+            {
             if (!cTeacherService.registerClassOfTeacher(idClass, idCourse, IDUSER)) {
                 MessageDialogHelper.showErrorDialog(parentForm, "Đăng ký không thành công!\nLỗi: Lớp này đã có giảng viên khác đăng ký!", "Cảnh báo");
                 return;
@@ -194,9 +208,14 @@ public class Class_TeacherController {
             {
             FormDetailClass.it.loadtableforclass();
             }
+            }
+            else
+            {
+                MessageDialogHelper.showErrorDialog(parentForm, "Bạn đã đăng kí lớp học phần này", "Thông báo");
+            }
         } catch (Exception e) {
             e.printStackTrace();
             MessageDialogHelper.showErrorDialog(parentForm, e.getMessage(), "Lỗi");
         }
-    }
+    } 
 }
